@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('movies', function (Blueprint $table) {
+        Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->string('title', 255)->nullable(false);
             $table->text('description')->nullable(false);
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('type', 255)->nullable(false);
             $table->string('artists', 255)->nullable(false);
             $table->string('writers', 255)->nullable(false);
-             $table->timestamps();
+            $table->timestamps();
         });
     }
 
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movies');
+        Schema::dropIfExists('comics');
     }
 };

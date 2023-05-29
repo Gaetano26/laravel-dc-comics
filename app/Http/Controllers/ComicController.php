@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Movie;
+use App\Models\Comic;
 
-class MovieController extends Controller
+class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        $comics = Movie::all();
+        $comics = Comic::all();
         return view('home', compact('comics'));
     }
 
@@ -25,7 +25,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -36,7 +36,11 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+        $newComic = new Comic();
+        $newComic->fill($form_data);
+        $newComic->save();
+        return redirect()->route('comics.show', $newComic->id);
     }
 
     /**
@@ -45,9 +49,11 @@ class MovieController extends Controller
      * @param  int  $id
      *
      */
-    public function show(Movie $movie)
+    public function show(Comic $comic)
     {
-        return view('comics.show', compact('movie'));
+
+
+        return view('comics.show', compact('comic'));
     }
 
     /**

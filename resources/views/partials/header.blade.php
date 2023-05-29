@@ -1,11 +1,13 @@
 <header>
     <div class="container">
         <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 d-flex align-items-center gap-5">
                     <div class="py-3 ps-5">
                         <img class="img-fluid" src="{{ Vite::asset('resources/loghi/dc-logo.png') }}" alt="">
                     </div>
-
+                    <span>   <a href="{{route('comics.create')}}" class="btn btn-primary text-white">
+                        Aggiungi Fumetto
+                    </a></span>
                 </div>
 
                 <div class="col-lg-8 ps-5 mt-5">

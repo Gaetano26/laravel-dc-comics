@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +13,7 @@ use App\Http\Controllers\MovieController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('comics', MovieController::class);
-Route::get('/', [MovieController::class , 'index'])->name('home');
-
-Route::resource('comic', MovieController::class);
-Route::get('comics.show', [MovieController::class , 'show'])->name('comics.show');
-
+Route::resource('comics', ComicController::class);
+Route::get('/', [ComicController::class , 'index'])->name('home');
 
 
