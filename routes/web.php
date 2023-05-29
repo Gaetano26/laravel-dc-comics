@@ -13,8 +13,8 @@ use APP\Http\Controllers\MovieController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::resource('comics', MovieController::class);
 Route::get('/', [MovieController::class , 'index'])->name('home');
 
 
-Route::resource('comics', MovieController::class);
+
