@@ -3,17 +3,17 @@
 @section('content')
         <div class="container position-relative px-3">
              <div class="cont-img-3">
-                 <img src="{{$thumb}}" alt="">
+                 <img src="{{$comic->thumb}}" alt="">
              </div>
 
             <div class="row my-5 py-5 d-flex gap-0">
                     <div class="col-8">
-                                <h1 class="text-white">{{ $title }} </h1>
+                                <h1 class="text-white">{{ $comic->title }} </h1>
                                 <div class="d-flex justify-content-between pt-2 px-3 bg-primary">
-                                    <p class="text-white">Price : {{ $price}}</p>
+                                    <p class="text-white">Price : {{ $comic->price}}</p>
                                     <p class="text-white">Aviable</p>
                                 </div>
-                                <p class="font text-white mt-3">{{ $description}}</p>
+                                <p class="font text-white mt-3">{{ $comic->description}}</p>
 
                     </div>
 
@@ -29,15 +29,10 @@
                         </div>
                         <div class="card-body ">
                             <p class="fw-bold text-white">Art by :  </p>
-                            @foreach ($artists as $artist )
-                              <span class="text-white">{{$artist}},</span>
+                              <span class="text-white">{{$comic->artist}},</span>
 
-                            @endforeach
                             <p class="fw-bold text-white mt-4">Written by :  </p>
-                            @foreach ($writers as $writer )
-                              <span class="text-white">{{$writer}},</span>
-
-                            @endforeach
+                              <span class="text-white">{{$comic->writer}},</span>
 
 
 
@@ -50,9 +45,9 @@
                             <h2 class="text-white">Specs</h2>
                         </div>
                         <div class="card-body d-flex flex-column gap-5">
-                            <p class="fw-bold text-white">Series :  {{$series}} </p>
-                            <p class="fw-bold text-white">U.S Price :  {{$price}} </p>
-                            <p class="fw-bold text-white">On Sale Date :  {{$sale_date}} </p>
+                            <p class="fw-bold text-white">Series :  {{$comic->series}} </p>
+                            <p class="fw-bold text-white">U.S Price :  {{$comic->price}} </p>
+                            <p class="fw-bold text-white">On Sale Date :  {{$comic->sale_date}} </p>
 
 
 

@@ -20,12 +20,13 @@ class MoviesTableSeeder extends Seeder
             $newMovie = new Movie();
             $newMovie->title = $comic['title'];
             $newMovie->description =$comic['description'];
+            $newMovie->thumb = $comic['thumb'];
             $newMovie->price = $comic['price'];
             $newMovie->series = $comic['series'];
             $newMovie->sale_date =$comic['sale_date'];
             $newMovie->type = $comic['type'];
-            $newMovie->artists = $comic['artists'];
-            $newMovie->writers = $comic['writers'];
+            $newMovie->artists = implode(',', $comic['artists']);
+            $newMovie->writers = implode(',', $comic['writers']);
             $newMovie->save();
         }
     }
