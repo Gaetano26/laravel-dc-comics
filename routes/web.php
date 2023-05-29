@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
+use APP\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,5 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', [MovieController::class , 'index'])->name('home');
+
 
 Route::resource('comics', MovieController::class);

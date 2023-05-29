@@ -7,7 +7,7 @@
       @foreach ($comics as $comic )
         <div class="col mt-3">
                 <div class=" cont-img-2  text-center">
-                    <img src="{{ $comic->thumb }}" alt="{{ $comic->title] }}" class="img-fluid">
+                    <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" class="img-fluid">
                 </div>
                 <div class=" mt-3 ps-2 titl  text-white">
                     <p>{{ $comic->title }} </p>
