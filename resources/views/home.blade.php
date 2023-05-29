@@ -11,7 +11,7 @@
                 </div>
                 <div class=" mt-3 ps-2 titl  text-white">
                     <p>{{ $comic->title }} </p>
-                    //<a href="{{ route('comics.show' , ['index' => $loop->index]) }}">Leggi Descrizione</a>
+                    //<a href="{{ route('comics.show' , ['comic' => $comic->id]) }}">Leggi Descrizione</a>
 
                 </div>
         </div>

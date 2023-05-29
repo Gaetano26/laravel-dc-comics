@@ -1,4 +1,4 @@
-@use './partials/variables' as *;
+
 
 $fa-font-path: "../fonts/webfonts" !default;
 
@@ -8,3 +8,160 @@ $fa-font-path: "../fonts/webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
 @import "~bootstrap/scss/bootstrap";
+
+
+
+
+header img {
+    width: 75px;
+    height: 75px;
+
+};
+
+.links li {
+      list-style: none;
+      border-bottom: 5px solid transparent;
+      height: 100%;
+
+
+};
+
+.links li a {
+    text-decoration: none;
+    color: black;
+};
+
+.links li a:hover {
+    color: blue;
+};
+
+
+.links li:hover {
+    border-bottom: 5px solid #0282f9 ;
+};
+
+.cont-img {
+    height: 320px;
+};
+
+.curr {
+    position: absolute;
+    left : 10%;
+    top: -15% ;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+};
+
+.cont-img-2 {
+    width: 180px;
+    height: 180px;
+    scale: 0.9;
+ }
+.cont-img-2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 100% 0%;
+}
+
+.titl {
+    font-size: 13px;
+}
+
+button {
+    padding: 8px 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    border: none;
+}
+
+.merc .row .col img {
+
+    width: 52px;
+    height: 60px;
+}
+
+.sfondo {
+    background: url('/resources/loghi/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.whites h2 {
+
+        color: white;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        max-width: fit-content;
+    }
+ .gry li a {
+
+        text-decoration: none;
+        color: grey;
+
+
+}
+
+.logo{
+    position: absolute;
+    right: 0;
+    top: -40%;
+}
+
+.whites {
+    max-width: 200px;
+}
+
+.sign {
+    border: 1px solid blue;
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    padding:  8px 14px;
+    text-transform: uppercase;
+}
+
+footer h3 {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+.bg-footer {
+    background-color: black;
+}
+
+.cont-img-3 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left : 10%;
+    top: -20% ;
+
+
+}
+
+.cont-img-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 0%;
+}
+
+.img-4 {
+    width: 60px;
+    height: 60px;
+}
+
+.font {
+    font-size: 15px;
+}

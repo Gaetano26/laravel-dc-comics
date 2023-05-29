@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use APP\Http\Controllers\MovieController;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,9 @@ use APP\Http\Controllers\MovieController;
 */
 Route::resource('comics', MovieController::class);
 Route::get('/', [MovieController::class , 'index'])->name('home');
+
+Route::resource('comic', MovieController::class);
+Route::get('comics.show', [MovieController::class , 'show'])->name('comics.show');
 
 
 
