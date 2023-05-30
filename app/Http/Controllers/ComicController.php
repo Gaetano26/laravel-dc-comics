@@ -40,8 +40,9 @@ class ComicController extends Controller
         $newComic = new Comic();
         $newComic->fill($form_data);
         $newComic->save();
-        return redirect()->route('comics.show', $newComic->id);
+        return redirect()->route('home')->with('message', "Fumetto con nome {$newComic->title} è stato salvato con successo");
     }
+
 
     /**
      * Display the specified resource.
@@ -62,9 +63,9 @@ class ComicController extends Controller
      * @param  int  $id
      *
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -74,9 +75,12 @@ class ComicController extends Controller
      * @param  int  $id
      *
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $form_data = $request->all();
+        //dd($form_data);
+        $comic->update($form_data);
+        return redirect()->route('home', $comic->id)->with('message', "Fumetto con nome {$comic->title} è stato modificato con successo");
     }
 
     /**
@@ -85,8 +89,9 @@ class ComicController extends Controller
      * @param  int  $id
      *
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('home')->with('message', "Fumetto con nome {$comic->title} cancellato con successo !");
     }
 }

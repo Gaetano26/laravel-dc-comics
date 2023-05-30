@@ -5,9 +5,6 @@
                     <div class="py-3 ps-5">
                         <img class="img-fluid" src="{{ Vite::asset('resources/loghi/dc-logo.png') }}" alt="">
                     </div>
-                    <span>   <a href="{{route('comics.create')}}" class="btn btn-primary text-white">
-                        Aggiungi Fumetto
-                    </a></span>
                 </div>
 
                 <div class="col-lg-8 ps-5 mt-5">
