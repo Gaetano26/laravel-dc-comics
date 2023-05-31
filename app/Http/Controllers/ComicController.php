@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 
 class ComicController extends Controller
 {
@@ -34,9 +37,9 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      *
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $newComic = new Comic();
         $newComic->fill($form_data);
         $newComic->save();
@@ -75,9 +78,9 @@ class ComicController extends Controller
      * @param  int  $id
      *
      */
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
-        $form_data = $request->all();
+        $form_data = $request->validated();
         //dd($form_data);
         $comic->update($form_data);
         return redirect()->route('home', $comic->id)->with('message', "Fumetto con nome {$comic->title} è stato modificato con successo");
